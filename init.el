@@ -13,7 +13,7 @@
 
 (require 'saveplace)
 (setq-default save-place t)
-
+(recentf-mode)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -40,7 +40,6 @@
 
 (package-initialize)
 (global-set-key (kbd "C-x g") 'magit-status)
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (setq inhibit-startup-message t)
@@ -103,6 +102,7 @@
 ;; Filetypes
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 
 ;; web-mode use django engine for html files
 (setq web-mode-engines-alist '(("django" . "\\.html\\'")))
@@ -154,3 +154,7 @@ argument, do this that many times."
 (global-set-key (kbd "C-x C-m") 'smex)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-c n") 'cleanup-buffer-or-region)
+(global-set-key (kbd "C-c y") 'bury-buffer)
+
+;; SCSS mode
+(setq scss-compile-at-save nil)
