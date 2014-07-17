@@ -32,3 +32,5 @@ argument, do this that many times."
   (condition-case nil
       (ns-get-selection-internal 'CLIPBOARD)
     (quit nil)))
+
+(provide 'pimpc-func)

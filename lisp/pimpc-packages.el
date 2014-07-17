@@ -26,3 +26,5 @@
   (when (and (not (package-installed-p pkg))
              (assoc pkg package-archive-contents))
     (package-install pkg)))
+
+(provide 'pimpc-packages)

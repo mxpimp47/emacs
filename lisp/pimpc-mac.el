@@ -8,3 +8,5 @@
         ns-use-srgb-colorspace t
         trash-directory "~/.Trash/emacs"
         delete-by-moving-to-trash t))
+
+(provide 'pimpc-mac)
