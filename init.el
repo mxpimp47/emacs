@@ -65,3 +65,10 @@
 ;; mode settings
 (setq scss-compile-at-save nil
       web-mode-engines-alist '(("django" . "\\.html\\'")))
+
+;; modifier keys
+(when (memq window-system '(mac ns))
+  (setq mac-option-modifier nil
+        mac-command-modifier 'meta
+        x-select-enable-clipboard t)
+  (run-with-idle-timer 5 nil 'exec-path-from-shell-initialize))
