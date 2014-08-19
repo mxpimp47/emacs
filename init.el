@@ -10,6 +10,7 @@
 (require 'pimpc-func)
 (require 'pimpc-mac)
 (require 'uniquify)
+(require 'dired-x)
 (require 'saveplace)
 
 (ido-mode t)
@@ -61,6 +62,7 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "M-/") 'hippie-expand)
 (global-set-key (kbd "M-f") 'forward-to-word)
+(define-key dired-mode-map (kbd "-") 'dired-up-directory)
 
 ;; mode settings
 (setq scss-compile-at-save nil
